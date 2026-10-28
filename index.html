@@ -1,0 +1,476 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Lockdown: Study Focus Timer &amp; App Blocker for iPhone</title>
+  <meta name="description" content="Lockdown blocks distracting apps while you study. Say what you're working on, pick 25, 45 or 60 minutes, and lock in. Built on Apple Screen Time. No account, no tracking.">
+  <meta name="keywords" content="study app, focus timer, app blocker, block apps iPhone, study timer, screen time, distraction blocker, pomodoro, focus app, homework app, exam revision, Lockdown app">
+  <meta name="author" content="Neel Sharma">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <link rel="canonical" href="https://neel-sh.github.io/Lockdown-website/">
+  <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)">
+  <meta name="color-scheme" content="light dark">
+  <meta name="format-detection" content="telephone=no">
+
+  <!-- Smart App Banner: uncomment and add the App Store ID once the app is live -->
+  <!-- <meta name="apple-itunes-app" content="app-id=0000000000"> -->
+  <meta name="apple-mobile-web-app-title" content="Lockdown">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Lockdown">
+  <meta property="og:title" content="Lockdown: Make time to study">
+  <meta property="og:description" content="Block the apps that pull you away and lock in for focused study sessions on iPhone.">
+  <meta property="og:url" content="https://neel-sh.github.io/Lockdown-website/">
+  <meta property="og:image" content="https://neel-sh.github.io/Lockdown-website/assets/img/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Lockdown on iPhone: Make time to study.">
+  <meta property="og:locale" content="en_US">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Lockdown: Make time to study">
+  <meta name="twitter:description" content="Block the apps that pull you away and lock in for focused study sessions on iPhone.">
+  <meta name="twitter:image" content="https://neel-sh.github.io/Lockdown-website/assets/img/og-image.jpg">
+
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="64x64" href="assets/img/favicon-64.png">
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="preload" as="image" imagesrcset="assets/screens/ready-675.webp 675w, assets/screens/ready.webp 1350w" imagesizes="(min-width: 1120px) 340px, 78vw" media="(prefers-color-scheme: light)" fetchpriority="high">
+  <link rel="preload" as="image" imagesrcset="assets/screens/ready-dark-675.webp 675w, assets/screens/ready-dark.webp 1350w" imagesizes="(min-width: 1120px) 340px, 78vw" media="(prefers-color-scheme: dark)" fetchpriority="high">
+  <link rel="stylesheet" href="assets/css/site.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://neel-sh.github.io/Lockdown-website/#website",
+        "url": "https://neel-sh.github.io/Lockdown-website/",
+        "name": "Lockdown",
+        "description": "Study focus timer and app blocker for iPhone.",
+        "inLanguage": "en"
+      },
+      {
+        "@type": "MobileApplication",
+        "@id": "https://neel-sh.github.io/Lockdown-website/#app",
+        "name": "Lockdown",
+        "alternateName": "Lockdown: Study Focus Timer",
+        "operatingSystem": "iOS 26.0 or later",
+        "applicationCategory": "ProductivityApplication",
+        "applicationSubCategory": "Education",
+        "description": "Pick the apps that pull you away, say what you're working on, and tap Lock in. Those apps stay closed until the session ends. Built on Apple's Screen Time frameworks with a Live Activity on the Lock Screen and Dynamic Island.",
+        "image": "https://neel-sh.github.io/Lockdown-website/assets/img/icon-512.png",
+        "screenshot": [
+          "https://neel-sh.github.io/Lockdown-website/assets/screens/ready.webp",
+          "https://neel-sh.github.io/Lockdown-website/assets/screens/session.webp",
+          "https://neel-sh.github.io/Lockdown-website/assets/screens/history.webp"
+        ],
+        "featureList": "Block distracting apps during study sessions; 25, 45, 60 minute or custom sessions from 15 minutes to 4 hours; Strict sessions; Live Activity and Dynamic Island timer; Weekly study history; No account and no tracking",
+        "author": { "@type": "Person", "name": "Neel Sharma" },
+        "publisher": { "@id": "https://neel-sh.github.io/Lockdown-website/#org" }
+      },
+      {
+        "@type": "Organization",
+        "@id": "https://neel-sh.github.io/Lockdown-website/#org",
+        "name": "Lockdown",
+        "url": "https://neel-sh.github.io/Lockdown-website/",
+        "logo": "https://neel-sh.github.io/Lockdown-website/assets/img/icon-512.png",
+        "email": "neelksharma13@gmail.com"
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          { "@type": "Question", "name": "How does Lockdown block apps on iPhone?", "acceptedAnswer": { "@type": "Answer", "text": "Lockdown uses Apple's Screen Time frameworks (Family Controls, Managed Settings and Device Activity). When you lock in, the apps you picked show a Lockdown screen instead of opening. At the end time, iOS lifts the block on its own, even if Lockdown isn't running." } },
+          { "@type": "Question", "name": "Can Lockdown see which apps I use?", "acceptedAnswer": { "@type": "Answer", "text": "No. Apple only gives Lockdown opaque tokens for the apps you choose. Lockdown can show their names and icons on your screen but never learns which apps they are. Your session history stays on your iPhone." } },
+          { "@type": "Question", "name": "How long can a study session be?", "acceptedAnswer": { "@type": "Answer", "text": "Pick 25, 45 or 60 minutes, or set a custom length anywhere from 15 minutes to 4 hours. 15 minutes is the shortest interval iOS allows for a scheduled block." } },
+          { "@type": "Question", "name": "What is a Strict session?", "acceptedAnswer": { "@type": "Answer", "text": "A Strict session hides the End button so you're not tempted to quit. It's a promise to yourself, not a lock: turning off Lockdown in Settings > Screen Time always ends a session." } },
+          { "@type": "Question", "name": "Do I need an account?", "acceptedAnswer": { "@type": "Answer", "text": "No. There is no sign-up, no account and no analytics. Everything Lockdown stores lives on your iPhone." } },
+          { "@type": "Question", "name": "Which iPhones does Lockdown support?", "acceptedAnswer": { "@type": "Answer", "text": "Lockdown runs on iPhone with iOS 26 or later." } }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="nav" role="banner">
+    <div class="wrap">
+      <a class="brand" href="./" aria-label="Lockdown home">
+        <img src="assets/img/icon-192.png" alt="" width="32" height="32">
+        Lockdown
+      </a>
+      <nav aria-label="Primary">
+        <ul class="nav-links">
+          <li><a href="#how">How it works</a></li>
+          <li><a href="#features">Features</a></li>
+          <li><a href="#screens">Screens</a></li>
+          <li><a href="#privacy">Privacy</a></li>
+          <li><a href="#faq">FAQ</a></li>
+        </ul>
+      </nav>
+      <a class="btn btn-primary" href="#download">Get the app</a>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- Hero: the Ready atmosphere, apricot and lavender overhead -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="atmosphere" aria-hidden="true">
+        <span class="glow drift" style="--c: var(--peach); left: 70%; top: 18%; width: 1500px; height: 1000px; --o: .8"></span>
+        <span class="glow drift slow" style="--c: var(--apricot); left: 64%; top: 30%; width: 900px; height: 720px; --o: .85"></span>
+        <span class="glow drift" style="--c: var(--coral); left: 80%; top: 36%; width: 620px; height: 520px; --o: .7"></span>
+        <span class="glow drift slow" style="--c: var(--lavender); left: 4%; top: 10%; width: 900px; height: 800px; --o: .7"></span>
+        <span class="glow" style="--c: var(--rose); left: 96%; top: 4%; width: 500px; height: 500px; --o: .25"></span>
+      </div>
+
+      <div class="wrap">
+        <div class="hero-copy">
+          <span class="pill reveal"><b>New</b> Study focus for iPhone</span>
+          <h1 id="hero-title" class="reveal d1">Make time to&nbsp;study.</h1>
+          <p class="lede reveal d2">Choose the apps that pull you away. When you lock in, they stay closed until your session&nbsp;ends.</p>
+          <div class="hero-cta reveal d3">
+            <a class="store" data-store href="#download" aria-label="Download Lockdown on the App Store">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.37 12.62c-.02-2.3 1.88-3.4 1.96-3.46-1.07-1.56-2.73-1.78-3.32-1.8-1.41-.14-2.76.83-3.47.83-.72 0-1.82-.81-3-.79-1.54.02-2.96.9-3.75 2.27-1.6 2.78-.41 6.89 1.15 9.14.76 1.1 1.67 2.34 2.86 2.3 1.15-.05 1.58-.74 2.97-.74 1.38 0 1.78.74 2.99.72 1.24-.02 2.02-1.12 2.77-2.23.87-1.28 1.23-2.52 1.25-2.58-.03-.01-2.39-.92-2.41-3.66zM14.1 5.86c.63-.77 1.06-1.83.94-2.89-.91.04-2.02.61-2.67 1.37-.58.68-1.1 1.77-.96 2.81 1.02.08 2.06-.52 2.69-1.29z"/></svg>
+              <span><small>Download on the</small><strong>App Store</strong></span>
+            </a>
+            <span class="hero-note">For iPhone · iOS 26 or later</span>
+          </div>
+        </div>
+
+        <div class="hero-stage reveal d2">
+          <img class="phone back left" src="assets/screens/welcome-675.webp" alt="" width="675" height="1380" loading="lazy" decoding="async" aria-hidden="true">
+          <picture class="phone back right"><source media="(prefers-color-scheme: dark)" srcset="assets/screens/session-dark-675.webp"><img src="assets/screens/session-675.webp" alt="" width="675" height="1380" loading="lazy" decoding="async" aria-hidden="true"></picture>
+          <picture>
+            <source media="(prefers-color-scheme: dark)" srcset="assets/screens/ready-dark-675.webp 675w, assets/screens/ready-dark.webp 1350w" sizes="(min-width: 1120px) 340px, 78vw">
+            <img class="phone" src="assets/screens/ready.webp" srcset="assets/screens/ready-675.webp 675w, assets/screens/ready.webp 1350w" sizes="(min-width: 1120px) 340px, 78vw" alt="Lockdown's Ready screen on iPhone: working on Biology for 45 minutes, with a Lock in button" width="1350" height="2760" fetchpriority="high">
+          </picture>
+        </div>
+      </div>
+      <div class="hero-fade" aria-hidden="true"></div>
+    </section>
+
+    <section class="strip" aria-label="Highlights">
+      <div class="wrap">
+        <ul>
+          <li class="reveal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="11" width="14" height="10" rx="2.5"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg>Built on Apple Screen Time</li>
+          <li class="reveal d1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v5c0 5-3.5 8.5-7 10-3.5-1.5-7-5-7-10V6l7-3z"/></svg>No account, no tracking</li>
+          <li class="reveal d2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="8" width="18" height="8" rx="4"/><circle cx="16" cy="12" r="1.5" fill="currentColor"/></svg>Live Activity &amp; Dynamic Island</li>
+          <li class="reveal d3"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>15 minutes to 4 hours</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- How it works -->
+    <section class="section" id="how" aria-labelledby="how-title">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <span class="eyebrow">How it works</span>
+          <h2 id="how-title">Three taps to&nbsp;focus.</h2>
+          <p class="sub">Lockdown remembers everything from last time, so most days you open it and tap Lock&nbsp;in.</p>
+        </div>
+        <ol class="steps">
+          <li class="step reveal">
+            <span class="glow" aria-hidden="true" style="--c: var(--apricot); left: 90%; top: 0%; width: 360px; height: 300px"></span>
+            <span class="num" aria-hidden="true">01</span>
+            <h3>Say what you're working&nbsp;on</h3>
+            <p>Biology, an essay outline, a problem set. Naming it turns a vague intention into a&nbsp;plan.</p>
+          </li>
+          <li class="step reveal d1">
+            <span class="glow" aria-hidden="true" style="--c: var(--coral); left: 90%; top: 0%; width: 360px; height: 300px"></span>
+            <span class="num" aria-hidden="true">02</span>
+            <h3>Pick how long</h3>
+            <p>Choose a preset or go custom, anywhere from 15&nbsp;minutes to 4&nbsp;hours.</p>
+            <div class="chips" aria-hidden="true"><span>25</span><span class="on">45</span><span>60</span><span>Custom</span></div>
+          </li>
+          <li class="step reveal d2">
+            <span class="glow" aria-hidden="true" style="--c: var(--lavender); left: 90%; top: 0%; width: 360px; height: 300px"></span>
+            <span class="num" aria-hidden="true">03</span>
+            <h3>Lock in</h3>
+            <p>The apps you chose stay closed until the session ends. Then they unlock on their own, right on&nbsp;time.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- Showcase -->
+    <section class="section" id="features" aria-labelledby="features-title" style="padding-top: 0">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <span class="eyebrow">Features</span>
+          <h2 id="features-title">Quiet by design.</h2>
+          <p class="sub">No streaks to protect, no badges to chase. Just a calm screen, a clear timer and the time you set&nbsp;aside.</p>
+        </div>
+
+        <div class="showcase">
+          <article class="row">
+            <div class="media reveal">
+              <span class="glow" aria-hidden="true" style="--c: var(--peach); left: 50%; top: 82%; width: 640px; height: 360px; --o: .8"></span>
+              <span class="glow" aria-hidden="true" style="--c: var(--lavender); left: 22%; top: 85%; width: 380px; height: 280px; --o: .7"></span>
+              <picture><source media="(prefers-color-scheme: dark)" srcset="assets/screens/session-dark-675.webp 675w, assets/screens/session-dark.webp 1350w" sizes="(min-width: 900px) 360px, 76vw"><img src="assets/screens/session.webp" srcset="assets/screens/session-675.webp 675w, assets/screens/session.webp 1350w" sizes="(min-width: 900px) 360px, 76vw" alt="A Lockdown study session in progress: Biology, 44 minutes 48 seconds remaining, ends at 7:59 PM" width="1350" height="2760" loading="lazy" decoding="async" class="phone"></picture>
+            </div>
+            <div class="copy reveal d1">
+              <span class="eyebrow">During a session</span>
+              <h3>You can put your phone&nbsp;down.</h3>
+              <p>A large, steady countdown and nothing else. Prefer not to watch the clock? Hide the countdown and Lockdown lets you know when it's&nbsp;time.</p>
+              <ul class="ticks">
+                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Live Activity on the Lock Screen and Dynamic&nbsp;Island</li>
+                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Apps unlock on time, even if Lockdown is&nbsp;closed</li>
+                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>A notification when the session&nbsp;ends</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="row flip">
+            <div class="media reveal">
+              <span class="glow" aria-hidden="true" style="--c: var(--apricot); left: 50%; top: 30%; width: 600px; height: 520px; --o: .55"></span>
+              <span class="glow" aria-hidden="true" style="--c: var(--yellow); left: 76%; top: 52%; width: 360px; height: 300px; --o: .6"></span>
+              <img src="assets/screens/history.webp" srcset="assets/screens/history-675.webp 675w, assets/screens/history.webp 1350w" sizes="(min-width: 900px) 360px, 76vw" alt="Lockdown History screen showing 3 hours 40 minutes protected across 5 sessions this week" width="1350" height="2760" loading="lazy" decoding="async" class="phone">
+            </div>
+            <div class="copy reveal d1">
+              <span class="eyebrow">History</span>
+              <h3>See the time you&nbsp;protected.</h3>
+              <p>A simple weekly view of every session, what it was for, and how it went. Completed or ended early, always said in words, never just&nbsp;color.</p>
+              <div class="quote">3 hr 40 min<small>protected across 5 sessions this week</small></div>
+            </div>
+          </article>
+
+          <article class="row">
+            <div class="media reveal">
+              <span class="glow" aria-hidden="true" style="--c: var(--coral); left: 50%; top: 34%; width: 520px; height: 520px; --o: .55"></span>
+              <span class="glow" aria-hidden="true" style="--c: var(--rose); left: 50%; top: 34%; width: 760px; height: 760px; --o: .3"></span>
+              <img src="assets/screens/welcome.webp" srcset="assets/screens/welcome-675.webp 675w, assets/screens/welcome.webp 1350w" sizes="(min-width: 900px) 360px, 76vw" alt="Lockdown welcome screen: Make time to study. Setup takes about a minute." width="1350" height="2760" loading="lazy" decoding="async" class="phone">
+            </div>
+            <div class="copy reveal d1">
+              <span class="eyebrow">Setup</span>
+              <h3>Ready in about a&nbsp;minute.</h3>
+              <p>Allow Screen Time access, pick the apps that pull you away, and you're done. Change them any time from the Ready&nbsp;screen.</p>
+              <div class="quote">"You set this time aside for Biology."<small>What you'll see if you open a blocked app mid-session</small></div>
+            </div>
+          </article>
+        </div>
+
+        <div class="grid">
+          <div class="card reveal">
+            <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="2"/><rect x="14" y="3" width="7" height="7" rx="2"/><rect x="3" y="14" width="7" height="7" rx="2"/><rect x="14" y="14" width="7" height="7" rx="2"/></svg></div>
+            <h3>Choose what to close</h3>
+            <p>Pick individual apps, whole categories or websites with Apple's own picker.</p>
+          </div>
+          <div class="card reveal d1">
+            <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="11" width="14" height="10" rx="2.5"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg></div>
+            <h3>Strict sessions</h3>
+            <p>Hide the End button when you need extra resolve. A promise to yourself, not a lock.</p>
+          </div>
+          <div class="card reveal d2">
+            <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="8" width="18" height="8" rx="4"/><circle cx="16" cy="12" r="1.5" fill="currentColor"/></svg></div>
+            <h3>Live Activity</h3>
+            <p>Your countdown on the Lock Screen and in the Dynamic Island, drawn by iOS itself.</p>
+          </div>
+          <div class="card reveal">
+            <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12a9 9 0 1 0 3-6.7"/><path d="M3 4v5h5"/><path d="M12 8v4l3 2"/></svg></div>
+            <h3>Keep going</h3>
+            <p>Finished and still in flow? Extend with one tap when a session ends.</p>
+          </div>
+          <div class="card reveal d1">
+            <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 3v18"/><path d="M12 3a9 9 0 0 1 0 18" fill="currentColor"/></svg></div>
+            <h3>Light and dark</h3>
+            <p>A warm field of light by day, a deep horizon at night. Follows your iPhone.</p>
+          </div>
+          <div class="card reveal d2">
+            <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="5" r="2"/><path d="M5 9l7 1.5L19 9"/><path d="M12 10.5V15l-3 6"/><path d="M12 15l3 6"/></svg></div>
+            <h3>Made for everyone</h3>
+            <p>Dynamic Type, VoiceOver, Reduce Motion, Reduce Transparency and Increase Contrast.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Screens -->
+    <section class="section" id="screens" aria-labelledby="screens-title" style="padding-top: 0; overflow: hidden">
+      <div class="wrap">
+        <div class="section-head center reveal">
+          <span class="eyebrow">Screens</span>
+          <h2 id="screens-title">Day and night.</h2>
+          <p class="sub">One light per screen. When you lock in, the light sinks to the horizon and stays&nbsp;still.</p>
+        </div>
+        <div class="gallery" role="list">
+          <figure role="listitem" class="reveal">
+            <img class="phone" src="assets/screens/ready-675.webp" alt="Ready screen in light mode" width="675" height="1380" loading="lazy" decoding="async">
+            <figcaption><strong>Ready</strong>Everything from last time</figcaption>
+          </figure>
+          <figure role="listitem" class="reveal d1">
+            <img class="phone" src="assets/screens/session-dark-675.webp" alt="Study session in dark mode, Biology, 44 minutes 55 seconds remaining" width="675" height="1380" loading="lazy" decoding="async">
+            <figcaption><strong>Locked in</strong>A low horizon at night</figcaption>
+          </figure>
+          <figure role="listitem" class="reveal d2">
+            <img class="phone" src="assets/screens/ready-dark-675.webp" alt="Ready screen in dark mode" width="675" height="1380" loading="lazy" decoding="async">
+            <figcaption><strong>Dark mode</strong>Deeper, quieter color</figcaption>
+          </figure>
+          <figure role="listitem" class="reveal d3">
+            <img class="phone" src="assets/screens/history-675.webp" alt="History screen with weekly chart" width="675" height="1380" loading="lazy" decoding="async">
+            <figcaption><strong>History</strong>Your week at a glance</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- Privacy -->
+    <section class="band" id="privacy" aria-labelledby="privacy-title">
+      <div class="band-inner">
+        <div class="atmosphere" aria-hidden="true">
+          <span class="glow drift" style="--c: #674f8d; left: 8%; top: 104%; width: 1100px; height: 640px; --o: .75"></span>
+          <span class="glow drift slow" style="--c: #a95d3a; left: 92%; top: 104%; width: 1100px; height: 640px; --o: .85"></span>
+          <span class="glow" style="--c: #ca5843; left: 74%; top: 110%; width: 700px; height: 360px; --o: .4"></span>
+        </div>
+        <div class="wrap" style="position: relative; z-index: 1">
+          <div class="section-head reveal">
+            <span class="eyebrow muted">Privacy</span>
+            <h2 id="privacy-title">Your choices stay&nbsp;yours.</h2>
+            <p class="sub muted">Apple keeps the apps you pick private, even from Lockdown. Session history is stored only on your&nbsp;iPhone.</p>
+          </div>
+          <div class="grid">
+            <div class="card reveal">
+              <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21c1.5-4 4.5-6 8-6s6.5 2 8 6"/><path d="M3 3l18 18"/></svg></div>
+              <h3>No account</h3>
+              <p>No sign-up, no email, no password. Open it and start.</p>
+            </div>
+            <div class="card reveal d1">
+              <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/><path d="M3 3l18 18"/></svg></div>
+              <h3>No tracking</h3>
+              <p>No analytics, no ads, no third-party SDKs. Lockdown makes no network requests.</p>
+            </div>
+            <div class="card reveal d2">
+              <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="2" width="12" height="20" rx="3"/><path d="M10 18h4"/></svg></div>
+              <h3>On your iPhone</h3>
+              <p>Preferences and history never leave the device. Delete them any time in Settings.</p>
+            </div>
+          </div>
+          <p class="reveal" style="margin-top: 40px"><a class="btn btn-glass" href="privacy/" style="background: rgba(255,255,255,.1); color: #f5f5f7; border-color: rgba(255,255,255,.14)">Read the Privacy Policy</a></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section" id="faq" aria-labelledby="faq-title">
+      <div class="wrap">
+        <div class="section-head center reveal">
+          <span class="eyebrow">FAQ</span>
+          <h2 id="faq-title">Questions, answered.</h2>
+        </div>
+        <div class="faq reveal">
+          <details>
+            <summary>How does Lockdown block apps on iPhone?</summary>
+            <div class="answer"><p>Lockdown uses Apple's Screen Time frameworks (Family Controls, Managed Settings and Device Activity). When you lock in, the apps you picked show a Lockdown screen instead of opening. At the end time, iOS lifts the block on its own, even if Lockdown isn't running.</p></div>
+          </details>
+          <details>
+            <summary>Can Lockdown see which apps I use?</summary>
+            <div class="answer"><p>No. Apple only gives Lockdown opaque tokens for the apps you choose. Lockdown can show their names and icons on your screen but never learns which apps they are. Your session history stays on your iPhone.</p></div>
+          </details>
+          <details>
+            <summary>How long can a study session be?</summary>
+            <div class="answer"><p>Pick 25, 45 or 60 minutes, or set a custom length anywhere from 15 minutes to 4 hours. 15 minutes is the shortest interval iOS allows for a scheduled block.</p></div>
+          </details>
+          <details>
+            <summary>What is a Strict session?</summary>
+            <div class="answer"><p>A Strict session hides the End button so you're not tempted to quit. It's a promise to yourself, not a lock: turning off Lockdown in Settings › Screen Time always ends a session.</p></div>
+          </details>
+          <details>
+            <summary>What happens if I open a blocked app?</summary>
+            <div class="answer"><p>You'll see a calm reminder, for example "You set this time aside for Biology. Instagram is available at 4:45 PM.", with buttons to close it or open Lockdown.</p></div>
+          </details>
+          <details>
+            <summary>Do I need an account?</summary>
+            <div class="answer"><p>No. There is no sign-up, no account and no analytics. Everything Lockdown stores lives on your iPhone.</p></div>
+          </details>
+          <details>
+            <summary>Which iPhones does Lockdown support?</summary>
+            <div class="answer"><p>Lockdown runs on iPhone with iOS 26 or later.</p></div>
+          </details>
+        </div>
+        <p class="muted reveal" style="text-align: center; margin-top: 40px">Something else? <a href="support/">Visit Support</a>.</p>
+      </div>
+    </section>
+
+    <!-- CTA: the one warm bloom -->
+    <section class="section cta" id="download" aria-labelledby="cta-title">
+      <div class="atmosphere" aria-hidden="true">
+        <span class="glow drift" style="--c: var(--peach); left: 50%; top: 40%; width: 1400px; height: 900px; --o: .7"></span>
+        <span class="glow drift slow" style="--c: var(--apricot); left: 44%; top: 44%; width: 900px; height: 700px; --o: .8"></span>
+        <span class="glow" style="--c: var(--coral); left: 52%; top: 46%; width: 520px; height: 420px; --o: .6"></span>
+        <span class="glow" style="--c: var(--yellow); left: 82%; top: 58%; width: 620px; height: 480px; --o: .6"></span>
+        <span class="glow" style="--c: var(--lavender); left: 92%; top: 14%; width: 520px; height: 420px; --o: .55"></span>
+      </div>
+      <div class="wrap">
+        <img class="icon reveal" src="assets/img/icon-512.png" alt="Lockdown app icon" width="112" height="112" loading="lazy">
+        <h2 id="cta-title" class="reveal d1">Lock in.</h2>
+        <p class="sub reveal d2">Your next study session is three taps&nbsp;away.</p>
+        <div class="hero-cta reveal d3">
+          <a class="store" data-store href="#download" aria-label="Download Lockdown on the App Store">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.37 12.62c-.02-2.3 1.88-3.4 1.96-3.46-1.07-1.56-2.73-1.78-3.32-1.8-1.41-.14-2.76.83-3.47.83-.72 0-1.82-.81-3-.79-1.54.02-2.96.9-3.75 2.27-1.6 2.78-.41 6.89 1.15 9.14.76 1.1 1.67 2.34 2.86 2.3 1.15-.05 1.58-.74 2.97-.74 1.38 0 1.78.74 2.99.72 1.24-.02 2.02-1.12 2.77-2.23.87-1.28 1.23-2.52 1.25-2.58-.03-.01-2.39-.92-2.41-3.66zM14.1 5.86c.63-.77 1.06-1.83.94-2.89-.91.04-2.02.61-2.67 1.37-.58.68-1.1 1.77-.96 2.81 1.02.08 2.06-.52 2.69-1.29z"/></svg>
+            <span><small>Download on the</small><strong>App Store</strong></span>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer" role="contentinfo">
+    <div class="atmosphere" aria-hidden="true">
+      <span class="glow" style="--c: var(--lavender); left: 10%; top: 100%; width: 900px; height: 500px; --o: .6"></span>
+      <span class="glow" style="--c: var(--peach); left: 90%; top: 100%; width: 900px; height: 500px; --o: .75"></span>
+      <span class="glow" style="--c: var(--apricot); left: 60%; top: 108%; width: 700px; height: 300px; --o: .4"></span>
+    </div>
+    <div class="wrap" style="position: relative; z-index: 1">
+      <div class="top">
+        <div class="about">
+          <a class="brand" href="./"><img src="assets/img/icon-192.png" alt="" width="32" height="32" loading="lazy">Lockdown</a>
+          <p>A calm study timer that closes the apps that pull you away. Made for iPhone.</p>
+          <a class="store" data-store href="#download" aria-label="Download Lockdown on the App Store">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.37 12.62c-.02-2.3 1.88-3.4 1.96-3.46-1.07-1.56-2.73-1.78-3.32-1.8-1.41-.14-2.76.83-3.47.83-.72 0-1.82-.81-3-.79-1.54.02-2.96.9-3.75 2.27-1.6 2.78-.41 6.89 1.15 9.14.76 1.1 1.67 2.34 2.86 2.3 1.15-.05 1.58-.74 2.97-.74 1.38 0 1.78.74 2.99.72 1.24-.02 2.02-1.12 2.77-2.23.87-1.28 1.23-2.52 1.25-2.58-.03-.01-2.39-.92-2.41-3.66zM14.1 5.86c.63-.77 1.06-1.83.94-2.89-.91.04-2.02.61-2.67 1.37-.58.68-1.1 1.77-.96 2.81 1.02.08 2.06-.52 2.69-1.29z"/></svg>
+            <span><small>Download on the</small><strong>App Store</strong></span>
+          </a>
+        </div>
+        <div class="cols">
+          <div>
+            <h4>Product</h4>
+            <ul>
+              <li><a href="#how">How it works</a></li>
+              <li><a href="#features">Features</a></li>
+              <li><a href="#screens">Screens</a></li>
+              <li><a href="#faq">FAQ</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4>Support</h4>
+            <ul>
+              <li><a href="support/">Help center</a></li>
+              <li><a href="mailto:neelksharma13@gmail.com?subject=Lockdown">Contact</a></li>
+              <li><a href="support/#feedback">Send feedback</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4>Legal</h4>
+            <ul>
+              <li><a href="privacy/">Privacy Policy</a></li>
+              <li><a href="terms/">Terms of Service</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="wordmark" aria-hidden="true">Lockdown</div>
+      <div class="bottom">
+        <span>© <span data-year>2026</span> Lockdown. All rights reserved.</span>
+        <span class="status"><i aria-hidden="true"></i>Made for focus</span>
+        <span class="links"><a href="privacy/">Privacy</a><a href="terms/">Terms</a><a href="support/">Support</a></span>
+      </div>
+      <p class="muted" style="font-size: 12px; margin-top: 16px">Apple, the Apple logo, iPhone and App Store are trademarks of Apple Inc., registered in the U.S. and other countries.</p>
+    </div>
+  </footer>
+
+  <script src="assets/js/site.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://neel-sh.github.io/Lockdown-website/sitemap.xml
