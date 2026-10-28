@@ -18,7 +18,8 @@
   <meta property="og:image" content="https://neel-sh.github.io/Lockdown-website/assets/img/og-image.jpg">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="icon" href="../favicon.ico" sizes="any">
-  <link rel="icon" type="image/png" sizes="64x64" href="../assets/img/favicon-64.png">
+  <link rel="icon" type="image/png" sizes="64x64" href="../assets/img/favicon-64.png" media="(prefers-color-scheme: light)">
+  <link rel="icon" type="image/png" sizes="64x64" href="../assets/img/favicon-dark-64.png" media="(prefers-color-scheme: dark)">
   <link rel="apple-touch-icon" href="../assets/img/apple-touch-icon.png">
   <link rel="manifest" href="../site.webmanifest">
   <link rel="stylesheet" href="../assets/css/site.css">
@@ -58,7 +59,7 @@
   <header class="nav" role="banner">
     <div class="wrap">
       <a class="brand" href="../" aria-label="Lockdown home">
-        <img src="../assets/img/icon-192.png" alt="" width="32" height="32">
+        <picture><source media="(prefers-color-scheme: dark)" srcset="../assets/img/icon-dark-192.png"><img src="../assets/img/icon-192.png" alt="" width="32" height="32"></picture>
         Lockdown
       </a>
       <nav aria-label="Primary">
@@ -173,7 +174,7 @@
     <div class="wrap" style="position: relative; z-index: 1">
       <div class="top">
         <div class="about">
-          <a class="brand" href="../"><img src="../assets/img/icon-192.png" alt="" width="32" height="32" loading="lazy">Lockdown</a>
+          <a class="brand" href="../"><picture><source media="(prefers-color-scheme: dark)" srcset="../assets/img/icon-dark-192.png"><img src="../assets/img/icon-192.png" alt="" width="32" height="32" loading="lazy"></picture>Lockdown</a>
           <p>A calm study timer that closes the apps that pull you away. Made for iPhone.</p>
           <a class="store" data-store href="../#download" aria-label="Download Lockdown on the App Store">
             <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.37 12.62c-.02-2.3 1.88-3.4 1.96-3.46-1.07-1.56-2.73-1.78-3.32-1.8-1.41-.14-2.76.83-3.47.83-.72 0-1.82-.81-3-.79-1.54.02-2.96.9-3.75 2.27-1.6 2.78-.41 6.89 1.15 9.14.76 1.1 1.67 2.34 2.86 2.3 1.15-.05 1.58-.74 2.97-.74 1.38 0 1.78.74 2.99.72 1.24-.02 2.02-1.12 2.77-2.23.87-1.28 1.23-2.52 1.25-2.58-.03-.01-2.39-.92-2.41-3.66zM14.1 5.86c.63-.77 1.06-1.83.94-2.89-.91.04-2.02.61-2.67 1.37-.58.68-1.1 1.77-.96 2.81 1.02.08 2.06-.52 2.69-1.29z"/></svg>

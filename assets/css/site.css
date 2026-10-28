@@ -161,7 +161,7 @@ h1, h2, h3, h4 { margin: 0; font-weight: 700; letter-spacing: -0.03em; line-heig
 }
 .nav .wrap { display: flex; align-items: center; justify-content: space-between; gap: var(--s4); }
 .brand { display: inline-flex; align-items: center; gap: 10px; text-decoration: none; font-weight: 650; font-size: 19px; letter-spacing: -0.02em; }
-.brand img { width: 32px; height: 32px; border-radius: 8px; box-shadow: 0 1px 3px rgba(0,0,0,.12); }
+.brand img { width: 34px; height: 34px; filter: drop-shadow(0 1px 2px rgba(0,0,0,.14)); }
 .nav-links { display: none; gap: var(--s8); list-style: none; margin: 0; padding: 0; }
 .nav-links a { text-decoration: none; font-size: 15px; color: var(--graphite); font-weight: 500; transition: color .2s; }
 .nav-links a:hover { color: var(--ink); }
@@ -405,7 +405,7 @@ main, .footer { overflow-x: clip; }
 .cta h2 { font-size: clamp(56px, 10vw, 128px); letter-spacing: -0.05em; }
 .cta .sub { margin: var(--s5) auto 0; max-width: 34ch; }
 .cta .hero-cta { justify-content: center; }
-.cta .icon { width: 112px; height: 112px; margin: 0 auto var(--s8); border-radius: 26px; box-shadow: 0 20px 40px rgba(120, 60, 30, .18); }
+.cta .icon { width: 128px; height: 128px; margin: 0 auto var(--s8); filter: drop-shadow(0 20px 30px rgba(120, 60, 30, .2)); }
 
 /* ---------- Footer ---------- */
 .footer { position: relative; overflow: hidden; isolation: isolate; padding: var(--s16) 0 var(--s8); border-top: 1px solid var(--hairline); }
