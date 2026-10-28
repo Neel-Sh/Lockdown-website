@@ -485,3 +485,45 @@ main, .footer { overflow-x: clip; }
 @media (prefers-contrast: more) {
   :root { --graphite: #45454c; --hairline: rgba(0,0,0,.2); }
 }
+
+/* ---------- Study circles ---------- */
+a.pill { text-decoration: none; transition: transform .25s var(--ease); }
+a.pill:hover { transform: translateY(-1px); }
+.tag { background: var(--ink); color: var(--ground); font-size: 12px; font-weight: 600; padding: 3px 9px; border-radius: 999px; }
+
+.circles-hero { display: grid; gap: var(--s12); align-items: center; }
+.circles-hero h2 { font-size: clamp(48px, 7.4vw, 92px); letter-spacing: -0.045em; }
+.circles-hero .copy { max-width: 520px; }
+@media (min-width: 960px) { .circles-hero { grid-template-columns: 1fr 1.05fr; gap: var(--s16); } }
+
+.duo { position: relative; display: flex; justify-content: center; padding: var(--s8) 0; isolation: isolate; min-height: 560px; }
+.duo .phone { position: relative; z-index: 1; display: block; }
+.duo .phone img { width: 100%; }
+.duo .phone.front { width: min(70vw, 330px); transform: translateX(14%); z-index: 2; }
+.duo .phone.back { position: absolute; width: min(56vw, 270px); left: 50%; top: 50%; transform: translate(-92%, -46%) rotate(-5deg); opacity: .98; }
+@media (max-width: 520px) {
+  .duo .phone.back { display: none; }
+  .duo .phone.front { transform: none; }
+  .duo { min-height: 0; }
+}
+
+.notif {
+  margin-top: var(--s8); display: grid; grid-template-columns: 40px 1fr auto; gap: 12px; align-items: center;
+  position: relative; max-width: 420px; padding: 14px 16px; border-radius: 24px;
+  background: var(--glass); border: 1px solid var(--glass-border);
+  -webkit-backdrop-filter: blur(24px) saturate(170%); backdrop-filter: blur(24px) saturate(170%);
+  box-shadow: 0 1px 2px rgba(17,17,19,.05), 0 16px 40px rgba(120,60,30,.12);
+}
+.notif picture { display: block; grid-column: 1; grid-row: 1; line-height: 0; }
+.notif img { width: 40px; height: 40px; }
+.notif > div { grid-column: 2; grid-row: 1; min-width: 0; }
+.notif .notif-btn { grid-column: 3; grid-row: 1; }
+.notif strong { display: block; font-size: 16px; letter-spacing: -0.01em; }
+.notif span { color: var(--graphite); font-size: 15px; }
+.notif .notif-btn {
+  color: var(--ink); font-weight: 600; font-size: 14px; padding: 7px 16px; border-radius: 999px;
+  background: color-mix(in srgb, var(--lavender) 70%, var(--ground));
+}
+.notif time { position: absolute; top: 10px; right: 16px; font-size: 12px; color: var(--graphite); display: none; }
+.circles .grid { margin-top: var(--s12); }
+.circles-note { margin-top: var(--s6); font-size: 15px; text-align: center; }

@@ -16,15 +16,15 @@ The name and subtitle are the most heavily weighted search fields. Together they
 Limit 100. Comma-separated, no spaces, and no words already in the name or subtitle (Apple indexes those already).
 
 ```
-app blocker,pomodoro,screen time,homework,exam,revision,distraction,productivity,college,school
+app blocker,pomodoro,screen time,homework,exam,revision,distraction,productivity,friends,school
 ```
 
-95 characters. Revisit after a month of App Store Connect search data and swap out terms that bring no impressions.
+95 characters. "friends" replaced "college" for study circles. Revisit after a month of App Store Connect search data and swap out terms that bring no impressions.
 
 ## Promotional text (170, editable without review)
 
 ```
-Pick the apps that pull you away, say what you're working on, and lock in. They stay closed until your session ends. No account. No tracking.
+New: study circles. Lock in with friends, join their sessions and share a weekly goal. Pick the apps that pull you away, and they stay closed until you're done.
 ```
 
 ## Description
@@ -45,6 +45,15 @@ DURING A SESSION
 • Opening a blocked app shows a calm reminder of what you set the time aside for
 • Apps unlock on time, even if Lockdown is closed
 • A notification when your session ends
+
+STUDY CIRCLES
+Lock in with friends. Make a circle for your study group, or just one friend, and share the invite link in your group chat.
+• See who's locked in right now, and until when
+• Join a friend's session in one tap and finish together
+• Nudge a friend who isn't studying
+• Share one weekly goal and a weekly group session
+• A Circles widget with live countdowns
+Circles are free to join and make, and use your own iCloud: no Lockdown account.
 
 STRICT SESSIONS
 Hide the End button when you need extra resolve. It's a promise to yourself, not a lock: turning off Lockdown in Settings › Screen Time always ends a session.
@@ -75,7 +84,7 @@ Terms of Service: https://neel-sh.github.io/Lockdown-website/terms/
 
 ## App Privacy ("nutrition label")
 
-Select **Data Not Collected**. The app has no networking, analytics, third-party SDKs or accounts, which matches the Privacy Policy.
+Review this before submitting a build with study circles. The app has no analytics, third-party SDKs, Lockdown accounts or Lockdown server, and the developer never receives any data. Circles do sync a name, session times, weekly minutes, streaks and (optionally) the intention to other users through CloudKit sharing in the user's iCloud. Check that against Apple's definition of "collect" in App Store Connect's App Privacy help: if you decide it counts, declare it there (likely Name and Other User Content, not linked to tracking) and update the Privacy Policy's "Data Not Collected" line to match.
 
 ## Category
 

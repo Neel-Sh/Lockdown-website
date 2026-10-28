@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>Lockdown: Study Focus Timer &amp; App Blocker for iPhone</title>
-  <meta name="description" content="Lockdown blocks distracting apps while you study. Say what you're working on, pick 25, 45 or 60 minutes, and lock in. Built on Apple Screen Time. No account, no tracking.">
-  <meta name="keywords" content="study app, focus timer, app blocker, block apps iPhone, study timer, screen time, distraction blocker, pomodoro, focus app, homework app, exam revision, Lockdown app">
+  <meta name="description" content="Lockdown blocks distracting apps while you study. Pick 25, 45 or 60 minutes and lock in, alone or with friends in study circles. Built on Apple Screen Time. No account, no tracking.">
+  <meta name="keywords" content="study app, focus timer, app blocker, block apps iPhone, study timer, screen time, distraction blocker, pomodoro, focus app, homework app, exam revision, study with friends, study group app, accountability, Lockdown app">
   <meta name="author" content="Neel Sharma">
   <meta name="robots" content="index, follow, max-image-preview:large">
   <link rel="canonical" href="https://neel-sh.github.io/Lockdown-website/">
@@ -62,14 +62,15 @@
         "operatingSystem": "iOS 26.0 or later",
         "applicationCategory": "ProductivityApplication",
         "applicationSubCategory": "Education",
-        "description": "Pick the apps that pull you away, say what you're working on, and tap Lock in. Those apps stay closed until the session ends. Built on Apple's Screen Time frameworks with a Live Activity on the Lock Screen and Dynamic Island.",
+        "description": "Pick the apps that pull you away, say what you're working on, and tap Lock in. Those apps stay closed until the session ends. Study circles let friends see each other lock in, join each other's sessions, nudge, and share a weekly goal. Built on Apple's Screen Time frameworks with a Live Activity on the Lock Screen and Dynamic Island.",
         "image": "https://neel-sh.github.io/Lockdown-website/assets/img/icon-512.png",
         "screenshot": [
           "https://neel-sh.github.io/Lockdown-website/assets/screens/ready.webp",
           "https://neel-sh.github.io/Lockdown-website/assets/screens/session.webp",
+          "https://neel-sh.github.io/Lockdown-website/assets/screens/circles.webp",
           "https://neel-sh.github.io/Lockdown-website/assets/screens/history.webp"
         ],
-        "featureList": "Block distracting apps during study sessions; 25, 45, 60 minute or custom sessions from 15 minutes to 4 hours; Strict sessions; Live Activity and Dynamic Island timer; Weekly study history; No account and no tracking",
+        "featureList": "Block distracting apps during study sessions; 25, 45, 60 minute or custom sessions from 15 minutes to 4 hours; Strict sessions; Live Activity and Dynamic Island timer; Study circles with friends: see who's locked in, join their session, nudges, weekly group goals and group sessions; Circles widget; Weekly study history; No account and no tracking",
         "author": { "@type": "Person", "name": "Neel Sharma" },
         "publisher": { "@id": "https://neel-sh.github.io/Lockdown-website/#org" }
       },
@@ -88,7 +89,10 @@
           { "@type": "Question", "name": "Can Lockdown see which apps I use?", "acceptedAnswer": { "@type": "Answer", "text": "No. Apple only gives Lockdown opaque tokens for the apps you choose. Lockdown can show their names and icons on your screen but never learns which apps they are. Your session history stays on your iPhone." } },
           { "@type": "Question", "name": "How long can a study session be?", "acceptedAnswer": { "@type": "Answer", "text": "Pick 25, 45 or 60 minutes, or set a custom length anywhere from 15 minutes to 4 hours. 15 minutes is the shortest interval iOS allows for a scheduled block." } },
           { "@type": "Question", "name": "What is a Strict session?", "acceptedAnswer": { "@type": "Answer", "text": "A Strict session hides the End button so you're not tempted to quit. It's a promise to yourself, not a lock: turning off Lockdown in Settings > Screen Time always ends a session." } },
-          { "@type": "Question", "name": "Do I need an account?", "acceptedAnswer": { "@type": "Answer", "text": "No. There is no sign-up, no account and no analytics. Everything Lockdown stores lives on your iPhone." } },
+          { "@type": "Question", "name": "How do study circles work?", "acceptedAnswer": { "@type": "Answer", "text": "Make a circle and share its invite link in your group chat. Everyone in it can see who's locked in and until when, join a friend's session so you both finish together, nudge someone who isn't studying, and work toward one weekly goal. A friend is simply a circle of two." } },
+          { "@type": "Question", "name": "What can friends in my circle see?", "acceptedAnswer": { "@type": "Answer", "text": "The name you choose, whether you're in a session and when it ends, your time studied this week and your streak. What you're working on appears only if you turn on Show what I'm working on. Friends never see which apps you block or your session history." } },
+          { "@type": "Question", "name": "Are study circles free?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Joining any number of circles, making one, and everything in them is free, including joining a group session someone else set up. Lockdown Pro adds setting up a circle's weekly group session and making more circles." } },
+          { "@type": "Question", "name": "Do I need an account?", "acceptedAnswer": { "@type": "Answer", "text": "No. There is no sign-up, no Lockdown account and no analytics. Study circles use the iCloud account already on your iPhone, and everything else Lockdown stores lives on your iPhone." } },
           { "@type": "Question", "name": "Which iPhones does Lockdown support?", "acceptedAnswer": { "@type": "Answer", "text": "Lockdown runs on iPhone with iOS 26 or later." } }
         ]
       }
@@ -108,6 +112,7 @@
       <nav aria-label="Primary">
         <ul class="nav-links">
           <li><a href="#how">How it works</a></li>
+          <li><a href="#circles">Circles</a></li>
           <li><a href="#features">Features</a></li>
           <li><a href="#screens">Screens</a></li>
           <li><a href="#privacy">Privacy</a></li>
@@ -131,7 +136,7 @@
 
       <div class="wrap">
         <div class="hero-copy">
-          <span class="pill reveal"><b>New</b> Study focus for iPhone</span>
+          <a class="pill reveal" href="#circles"><b>New</b> Study circles: lock in with friends</a>
           <h1 id="hero-title" class="reveal d1">Make time to&nbsp;study.</h1>
           <p class="lede reveal d2">Choose the apps that pull you away. When you lock in, they stay closed until your session&nbsp;ends.</p>
           <div class="hero-cta reveal d3">
@@ -144,11 +149,11 @@
         </div>
 
         <div class="hero-stage reveal d2">
-          <img class="phone back left" src="assets/screens/welcome-675.webp" alt="" width="675" height="1380" loading="lazy" decoding="async" aria-hidden="true">
+          <picture class="phone back left"><source media="(prefers-color-scheme: dark)" srcset="assets/screens/circles-dark-675.webp"><img src="assets/screens/circles-675.webp" alt="" width="675" height="1380" loading="lazy" decoding="async" aria-hidden="true"></picture>
           <picture class="phone back right"><source media="(prefers-color-scheme: dark)" srcset="assets/screens/session-dark-675.webp"><img src="assets/screens/session-675.webp" alt="" width="675" height="1380" loading="lazy" decoding="async" aria-hidden="true"></picture>
           <picture>
             <source media="(prefers-color-scheme: dark)" srcset="assets/screens/ready-dark-675.webp 675w, assets/screens/ready-dark.webp 1350w" sizes="(min-width: 1120px) 340px, 78vw">
-            <img class="phone" src="assets/screens/ready.webp" srcset="assets/screens/ready-675.webp 675w, assets/screens/ready.webp 1350w" sizes="(min-width: 1120px) 340px, 78vw" alt="Lockdown's Ready screen on iPhone: working on Biology for 45 minutes, with a Lock in button" width="1350" height="2760" fetchpriority="high">
+            <img class="phone" src="assets/screens/ready.webp" srcset="assets/screens/ready-675.webp 675w, assets/screens/ready.webp 1350w" sizes="(min-width: 1120px) 340px, 78vw" alt="Lockdown's Ready screen on iPhone: working on Biology for 45 minutes, with Maya and Jordan locked in and a Join button" width="1350" height="2760" fetchpriority="high">
           </picture>
         </div>
       </div>
@@ -198,6 +203,70 @@
       </div>
     </section>
 
+    <!-- Circles: friends lock in together -->
+    <section class="section circles" id="circles" aria-labelledby="circles-title" style="padding-top: 0">
+      <div class="wrap">
+        <div class="circles-hero">
+          <div class="copy">
+            <span class="eyebrow reveal"><span class="tag">New</span> Study circles</span>
+            <h2 id="circles-title" class="reveal d1">Lock in <br>together.</h2>
+            <p class="sub reveal d2">Make a circle for your study group, or just one friend. See who's locked in right now, join their session with one tap, and finish&nbsp;together.</p>
+            <div class="notif reveal d3" aria-label="Example notification: Maya locked in, Cell biology, 39 minutes left, with a Join button">
+              <picture><source media="(prefers-color-scheme: dark)" srcset="assets/img/icon-dark-192.png"><img src="assets/img/icon-192.png" alt="" width="40" height="40" loading="lazy"></picture>
+              <div><strong>Maya locked in</strong><span>Cell biology · 39 min left</span></div>
+              <span class="notif-btn" aria-hidden="true">Join</span>
+              <time aria-hidden="true">now</time>
+            </div>
+            <ul class="ticks reveal d3">
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Free for everyone, with no account to make</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Invite anyone with a link, straight into the group&nbsp;chat</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Your own blocked apps and Strict setting still&nbsp;apply</li>
+            </ul>
+          </div>
+          <div class="duo reveal d1">
+            <span class="glow" aria-hidden="true" style="--c: var(--lavender); left: 30%; top: 40%; width: 640px; height: 560px; --o: .75"></span>
+            <span class="glow" aria-hidden="true" style="--c: var(--peach); left: 74%; top: 62%; width: 640px; height: 560px; --o: .8"></span>
+            <picture class="phone back"><source media="(prefers-color-scheme: dark)" srcset="assets/screens/session-dark-675.webp"><img src="assets/screens/session-675.webp" alt="A study session with the line: Maya and Jordan are locked in too" width="675" height="1380" loading="lazy" decoding="async"></picture>
+            <picture class="phone front"><source media="(prefers-color-scheme: dark)" srcset="assets/screens/circles-dark-675.webp 675w, assets/screens/circles-dark.webp 1350w" sizes="(min-width: 900px) 330px, 70vw"><img src="assets/screens/circles.webp" srcset="assets/screens/circles-675.webp 675w, assets/screens/circles.webp 1350w" sizes="(min-width: 900px) 330px, 70vw" alt="Lockdown Circles screen: Bio 201 crew with a group session now, a weekly goal of 18 hours 15 minutes of 20, and Maya and Jordan locked in" width="1350" height="2760" loading="lazy" decoding="async"></picture>
+          </div>
+        </div>
+
+        <div class="grid">
+          <div class="card reveal">
+            <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="3.2"/><path d="M3 20c.8-3.4 3.2-5.2 6-5.2s5.2 1.8 6 5.2"/><circle cx="17" cy="9" r="2.6"/><path d="M16.2 14.4c2.4.2 4.1 1.8 4.8 4.6"/></svg></div>
+            <h3>See who's locked in</h3>
+            <p>Who's studying right now and until when, plus everyone's time this week, ranked, with&nbsp;streaks.</p>
+          </div>
+          <div class="card reveal d1">
+            <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h12"/><path d="M13 6l6 6-6 6"/></svg></div>
+            <h3>Join in one tap</h3>
+            <p>Join a friend from Circles, the Ready screen, a notification or the widget. Your session ends when theirs&nbsp;does.</p>
+          </div>
+          <div class="card reveal d2">
+            <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 8-3 8h18s-3-1-3-8"/><path d="M10.3 20a1.9 1.9 0 0 0 3.4 0"/></svg></div>
+            <h3>Nudge a friend</h3>
+            <p>Swipe on a friend who isn't studying to send a gentle "lock in?". Their notification has a Lock In&nbsp;button.</p>
+          </div>
+          <div class="card reveal">
+            <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 21V4"/><path d="M5 4h11l-2 4 2 4H5"/></svg></div>
+            <h3>One weekly goal</h3>
+            <p>Set a goal for the whole circle, from 5 to 50 hours, and watch it fill as everyone&nbsp;studies.</p>
+          </div>
+          <div class="card reveal d1">
+            <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M3 10h18"/><path d="M8 3v4M16 3v4"/></svg></div>
+            <h3>Group sessions</h3>
+            <p>Pick a weekly time and everyone gets a reminder with a Lock In button, so the whole group starts&nbsp;together.</p>
+          </div>
+          <div class="card reveal d2">
+            <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="8" height="8" rx="2.5"/><rect x="13" y="3" width="8" height="8" rx="2.5"/><rect x="3" y="13" width="18" height="8" rx="2.5"/></svg></div>
+            <h3>Circles widget</h3>
+            <p>Live countdowns for friends on your Home Screen and Lock Screen, with a Join button for&nbsp;each.</p>
+          </div>
+        </div>
+        <p class="muted reveal circles-note">Joining circles, making one, and joining any group session are free. Lockdown Pro adds setting up group sessions and making more&nbsp;circles.</p>
+      </div>
+    </section>
+
     <!-- Showcase -->
     <section class="section" id="features" aria-labelledby="features-title" style="padding-top: 0">
       <div class="wrap">
@@ -212,7 +281,7 @@
             <div class="media reveal">
               <span class="glow" aria-hidden="true" style="--c: var(--peach); left: 50%; top: 82%; width: 640px; height: 360px; --o: .8"></span>
               <span class="glow" aria-hidden="true" style="--c: var(--lavender); left: 22%; top: 85%; width: 380px; height: 280px; --o: .7"></span>
-              <picture><source media="(prefers-color-scheme: dark)" srcset="assets/screens/session-dark-675.webp 675w, assets/screens/session-dark.webp 1350w" sizes="(min-width: 900px) 360px, 76vw"><img src="assets/screens/session.webp" srcset="assets/screens/session-675.webp 675w, assets/screens/session.webp 1350w" sizes="(min-width: 900px) 360px, 76vw" alt="A Lockdown study session in progress: Biology, 44 minutes 48 seconds remaining, ends at 7:59 PM" width="1350" height="2760" loading="lazy" decoding="async" class="phone"></picture>
+              <picture><source media="(prefers-color-scheme: dark)" srcset="assets/screens/session-dark-675.webp 675w, assets/screens/session-dark.webp 1350w" sizes="(min-width: 900px) 360px, 76vw"><img src="assets/screens/session.webp" srcset="assets/screens/session-675.webp 675w, assets/screens/session.webp 1350w" sizes="(min-width: 900px) 360px, 76vw" alt="A Lockdown study session in progress: Biology, 44 minutes 35 seconds remaining, with Maya and Jordan locked in too" width="1350" height="2760" loading="lazy" decoding="async" class="phone"></picture>
             </div>
             <div class="copy reveal d1">
               <span class="eyebrow">During a session</span>
@@ -221,6 +290,7 @@
               <ul class="ticks">
                 <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Live Activity on the Lock Screen and Dynamic&nbsp;Island</li>
                 <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Apps unlock on time, even if Lockdown is&nbsp;closed</li>
+                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>See which friends are locked in with&nbsp;you</li>
                 <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>A notification when the session&nbsp;ends</li>
               </ul>
             </div>
@@ -312,6 +382,10 @@
             <figcaption><strong>Dark mode</strong>Deeper, quieter color</figcaption>
           </figure>
           <figure role="listitem" class="reveal d3">
+            <img class="phone" src="assets/screens/circles-dark-675.webp" alt="Circles screen in dark mode" width="675" height="1380" loading="lazy" decoding="async">
+            <figcaption><strong>Circles</strong>Friends, locked in together</figcaption>
+          </figure>
+          <figure role="listitem" class="reveal d3">
             <img class="phone" src="assets/screens/history-675.webp" alt="History screen with weekly chart" width="675" height="1380" loading="lazy" decoding="async">
             <figcaption><strong>History</strong>Your week at a glance</figcaption>
           </figure>
@@ -331,7 +405,7 @@
           <div class="section-head reveal">
             <span class="eyebrow muted">Privacy</span>
             <h2 id="privacy-title">Your choices stay&nbsp;yours.</h2>
-            <p class="sub muted">Apple keeps the apps you pick private, even from Lockdown. Session history is stored only on your&nbsp;iPhone.</p>
+            <p class="sub muted">Apple keeps the apps you pick private, even from Lockdown. Your history stays on your iPhone, and circles share only what you choose, through your own&nbsp;iCloud.</p>
           </div>
           <div class="grid">
             <div class="card reveal">
@@ -342,12 +416,12 @@
             <div class="card reveal d1">
               <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/><path d="M3 3l18 18"/></svg></div>
               <h3>No tracking</h3>
-              <p>No analytics, no ads, no third-party SDKs. Lockdown makes no network requests.</p>
+              <p>No analytics, no ads, no third-party SDKs. Lockdown has no server; circles sync through Apple's iCloud.</p>
             </div>
             <div class="card reveal d2">
               <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="2" width="12" height="20" rx="3"/><path d="M10 18h4"/></svg></div>
               <h3>On your iPhone</h3>
-              <p>Preferences and history never leave the device. Delete them any time in Settings.</p>
+              <p>Preferences, block lists and history never leave the device. Delete them any time in Settings.</p>
             </div>
           </div>
           <p class="reveal" style="margin-top: 40px"><a class="btn btn-glass" href="privacy/" style="background: rgba(255,255,255,.1); color: #f5f5f7; border-color: rgba(255,255,255,.14)">Read the Privacy Policy</a></p>
@@ -384,8 +458,20 @@
             <div class="answer"><p>You'll see a calm reminder, for example "You set this time aside for Biology. Instagram is available at 4:45 PM.", with buttons to close it or open Lockdown.</p></div>
           </details>
           <details>
+            <summary>How do study circles work?</summary>
+            <div class="answer"><p>Make a circle and share its invite link in your group chat. Everyone in it can see who's locked in and until when, join a friend's session so you both finish together, nudge someone who isn't studying, and work toward one weekly goal. A friend is simply a circle of two.</p></div>
+          </details>
+          <details>
+            <summary>What can friends in my circle see?</summary>
+            <div class="answer"><p>The name you choose, whether you're in a session and when it ends, your time studied this week and your streak. What you're working on appears only if you turn on "Show what I'm working on".</p><p>Friends never see which apps you block, your settings or your session history.</p></div>
+          </details>
+          <details>
+            <summary>Are study circles free?</summary>
+            <div class="answer"><p>Yes. Joining any number of circles, making one, and everything in them is free, including joining a group session someone else set up. Lockdown Pro adds setting up a circle's weekly group session and making more circles.</p></div>
+          </details>
+          <details>
             <summary>Do I need an account?</summary>
-            <div class="answer"><p>No. There is no sign-up, no account and no analytics. Everything Lockdown stores lives on your iPhone.</p></div>
+            <div class="answer"><p>No. There is no sign-up, no Lockdown account and no analytics. Study circles use the iCloud account already on your iPhone, and everything else Lockdown stores lives on your iPhone.</p></div>
           </details>
           <details>
             <summary>Which iPhones does Lockdown support?</summary>
@@ -440,6 +526,7 @@
             <h4>Product</h4>
             <ul>
               <li><a href="#how">How it works</a></li>
+              <li><a href="#circles">Study circles</a></li>
               <li><a href="#features">Features</a></li>
               <li><a href="#screens">Screens</a></li>
               <li><a href="#faq">FAQ</a></li>
